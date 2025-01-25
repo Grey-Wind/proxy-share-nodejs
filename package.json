@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node src/test.js"
   },
-  "author": "",
+  "author": "Grey-Wind",
   "license": "Apache-2.0",
   "dependencies": {
     "http-proxy": "^1.18.1"
