@@ -25,11 +25,6 @@ const createWindow = () => {
 
 app.whenReady().then(() => {
   createWindow();
-
-  // 监听前端的事件
-  ipcMain.on('test', () => {
-    alert("test alert");
-  });
 });
 
 app.on('window-all-closed', () => {
