@@ -4,11 +4,50 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node src/test.js"
+    "proxy-test": "node src/test.js",
+    "electron-ui": "node index.js",
+    "app:dir": "electron-builder --dir",
+    "app:dist": "electron-builder"
   },
   "author": "Grey-Wind",
   "license": "Apache-2.0",
   "dependencies": {
     "http-proxy": "^1.18.1"
+  },
+  "devDependencies": {
+    "electron": "^34.0.1",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "top.qingyi-studio.proxyshare",
+    "productName":"proxy-share",
+    "copyright":"Apache-2.0",
+    "directories": {
+      "output": "dist"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "./image/icon.ico",
+      "uninstallerIcon": "./image/icon.ico",
+      "installerHeaderIcon": "./image/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Proxy Share"
+    },
+    "win": {
+      "icon": "./image/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    }
   }
+
 }
