@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "proxy-test": "node src/test.js",
-    "electron-ui": "node index.js",
+    "electron": "electron .",
     "app:dir": "electron-builder --dir",
     "app:dist": "electron-builder"
   },
@@ -20,8 +20,8 @@
   },
   "build": {
     "appId": "top.qingyi-studio.proxyshare",
-    "productName":"proxy-share",
-    "copyright":"Apache-2.0",
+    "productName": "proxy-share",
+    "copyright": "Apache-2.0",
     "directories": {
       "output": "dist"
     },
@@ -49,5 +49,4 @@
       ]
     }
   }
-
 }

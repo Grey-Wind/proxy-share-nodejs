@@ -1,0 +1,28 @@
+.runBtn{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: all 0.5s ease; /* 平滑过渡 */
+}
+
+.runBtn:hover {
+    background-color: #397e3c;
+    color: white;
+}
+
+.runBtn.disable {
+    background-color: #315431;
+}
