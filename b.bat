@@ -1,3 +1,3 @@
 @echo off
-electron-builder --win
-electron-builder --linux
+npm run build-win
+npm run build-linux
