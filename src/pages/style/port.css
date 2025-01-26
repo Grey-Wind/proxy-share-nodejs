@@ -1,0 +1,20 @@
+.port {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.15vw dashed #787878;
+    padding: 0.2% 0.3%;
+    font-size: large;
+}
+
+.port[type="number"] {
+    text-align: center;
+    color: #00bfff;
+}
+
+/* 去除增大减小键 */
+.port[type="number"]::-webkit-outer-spin-button,
+.port[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

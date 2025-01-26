@@ -13,11 +13,17 @@
     <a id="title">Proxy Share</a>
   </div>
   <div id="container">
-    <p>Run HTTP server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <p>Proxy program port&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="number" id="proxyPort" value="7890" min="1" max="65535" step="1" class="port proxy" />
+    </p>
+    <p>HTTP/HTTPS server port&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="number" id="serverPort" value="7890" min="1" max="65535" step="1" class="port server" />
+    </p>
+    <p>Run HTTP server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <button type="button" id="httpServerBtn" class="runBtn">Run</button>
       <label class="state stopped">stopped</label>
     </p>
-    <p>Run HTTPS server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <p>Run HTTPS server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <button type="button" id="httpsServerBtn" class="runBtn">Run</button>
       <label class="state stopped">stopped</label>
     </p>
@@ -25,9 +31,11 @@
     <button type="button" id="testbtn" style="display: none;">测试launcher.js</button>
   </div>
 
-  <link rel="stylesheet" type="text/css" href="style/base.css">
-  <link rel="stylesheet" type="text/css" href="style/stateLabel.css">
-  <link rel="stylesheet" type="text/css" href="style/runBtn.css">
+  <link rel="stylesheet" href="style/base.css">
+  <link rel="stylesheet" href="style/stateLabel.css">
+  <link rel="stylesheet" href="style/runBtn.css">
+  <link rel="stylesheet" href="style/port.css">
+
   <script>
     document.getElementById('testbtn').addEventListener('click', () => {
       // 调用挂载到 window 对象上的方法
