@@ -25,7 +25,7 @@
     "productName": "proxy-share",
     "copyright": "Apache-2.0",
     "directories": {
-      "output": "dist/${platform}"
+      "output": "dist"
     },
     "nsis": {
       "oneClick": false,
