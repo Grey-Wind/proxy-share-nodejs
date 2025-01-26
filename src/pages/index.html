@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proxy Share</title>
+  <script src="script/runSerevr.js"></script>
 </head>
 
 <body>
@@ -13,17 +14,20 @@
     <a id="title">Proxy Share</a>
   </div>
   <div id="container">
-    <p>Proxy program port&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <p>Proxy program
+      port&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <input type="number" id="proxyPort" value="7890" min="1" max="65535" step="1" class="port proxy" />
     </p>
     <p>HTTP/HTTPS server port&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="number" id="serverPort" value="7890" min="1" max="65535" step="1" class="port server" />
+      <input type="number" id="serverPort" value="1234" min="1" max="65535" step="1" class="port server" />
     </p>
-    <p>Run HTTP server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <button type="button" id="httpServerBtn" class="runBtn">Run</button>
+    <p>Run HTTP
+      server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button type="button" id="httpServerBtn" class="runBtn" onclick="HttpServer()">Run</button>
       <label class="state stopped">stopped</label>
     </p>
-    <p>Run HTTPS server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <p>Run HTTPS
+      server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <button type="button" id="httpsServerBtn" class="runBtn">Run</button>
       <label class="state stopped">stopped</label>
     </p>
@@ -37,6 +41,7 @@
   <link rel="stylesheet" href="style/port.css">
 
   <script>
+    // 测试按钮事件
     document.getElementById('testbtn').addEventListener('click', () => {
       // 调用挂载到 window 对象上的方法
       window.myCustomMethod();

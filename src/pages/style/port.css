@@ -4,7 +4,7 @@
     border: none;
     border-bottom: 0.15vw dashed #787878;
     padding: 0.2% 0.3%;
-    font-size: large;
+    font-size: 1vw;
 }
 
 .port[type="number"] {
