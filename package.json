@@ -4,111 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "proxy-test": "node src/test.js",
-    "electron": "electron .",
-    "build": "electron-builder",
-    "build-win": "electron-builder --win",
-    "build-mac": "electron-builder --mac",
-    "build-linux": "electron-builder --linux"
+    "proxy-test": "node src/test.js"
   },
   "author": "Grey-Wind",
   "license": "Apache-2.0",
   "dependencies": {
     "http-proxy": "^1.18.1"
-  },
-  "devDependencies": {
-    "electron": "^34.0.1",
-    "electron-builder": "^25.1.8"
-  },
-  "build": {
-    "appId": "top.qingyi-studio.proxyshare",
-    "productName": "proxy-share",
-    "copyright": "Apache-2.0",
-    "directories": {
-      "output": "dist"
-    },
-    "nsis": {
-      "oneClick": false,
-      "allowElevation": true,
-      "allowToChangeInstallationDirectory": true,
-      "installerIcon": "./image/icon.ico",
-      "uninstallerIcon": "./image/icon.ico",
-      "installerHeaderIcon": "./image/icon.ico",
-      "createDesktopShortcut": true,
-      "createStartMenuShortcut": true,
-      "shortcutName": "Proxy Share"
-    },
-    "win": {
-      "icon": "./image/icon.ico",
-      "target": [
-        {
-          "target": "nsis",
-          "arch": [
-            "x64",
-            "ia32"
-          ]
-        }
-      ]
-    },
-    "mac": {
-      "icon": "./image/icon.icns",
-      "category": "public.app-category.utilities",
-      "target": [
-        {
-          "target": "dmg",
-          "arch": [
-            "x64",
-            "arm64"
-          ]
-        },
-        {
-          "target": "zip",
-          "arch": [
-            "x64",
-            "arm64"
-          ]
-        }
-      ],
-      "hardenedRuntime": true,
-      "gatekeeperAssess": false,
-      "entitlements": "./entitlements.mac.plist",
-      "entitlementsInherit": "./entitlements.mac.plist"
-    },
-    "linux": {
-      "icon": "./image/icon.png",
-      "target": [
-        {
-          "target": "AppImage",
-          "arch": [
-            "x64"
-          ]
-        },
-        {
-          "target": "deb",
-          "arch": [
-            "x64"
-          ]
-        },
-        {
-          "target": "rpm",
-          "arch": [
-            "x64"
-          ]
-        },
-        {
-          "target": "snap",
-          "arch": [
-            "x64"
-          ]
-        }
-      ],
-      "category": "Utility",
-      "maintainer": "your-email@example.com",
-      "desktop": {
-        "Name": "Proxy Share",
-        "Comment": "A tool for sharing proxies",
-        "Categories": "Utility;Network;"
-      }
-    }
   }
 }

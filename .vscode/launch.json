@@ -4,23 +4,6 @@
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Run electron-builder",
-            "runtimeExecutable": "electron-builder",
-            "cwd": "${workspaceFolder}",
-            "args": []
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Run electron",
-            "runtimeExecutable": "electron",
-            "cwd": "${workspaceFolder}",
-            "args": ["."]
-        },
         {
             "type": "node",
             "request": "launch",
