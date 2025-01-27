@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "proxy-test": "node src/test.js"
+    "proxy-test": "node src/test.js",
+    "test": "node index.js"
   },
   "author": "Grey-Wind",
   "license": "Apache-2.0",
