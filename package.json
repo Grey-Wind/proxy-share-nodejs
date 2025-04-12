@@ -1,0 +1,15 @@
+{
+  "name": "proxy-share",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "proxy-test": "node src/test.js",
+    "test": "node index.js"
+  },
+  "author": "Grey-Wind",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "http-proxy": "^1.18.1"
+  }
+}
